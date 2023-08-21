@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duse Watches</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet"> <!-- Include Google Font -->
+    <style>
+         /* Custom CSS for scrolling text */
+         .scrolling-text {
+            font-family: 'Courgette', cursive; /* Use the Google Font here */
+            font-size: 1.5rem; /* Adjust the font size here */
+            white-space: nowrap;
+            overflow: hidden;
+            animation: marquee 20s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+        /* Custom styles for the carousel and text */
+        .carousel-container {
+            position: relative;
+            height: 100vh;
+        }
+
+        .carousel-title {
+          
+            font-size: 5rem; /* Adjust the title font size here */
+            font-weight: bold;
+            margin-bottom: 10px; /* Add some spacing below the title */
+            font-family: 'Courgette', cursive; /* Use the Google Font here */
+        }
+
+        .carousel-subtitle {
+            border-color: black;
+            font-size: 2rem; /* Adjust the title font size here */
+            font-weight: normal;
+            margin-bottom: 10px; /* Add some spacing below the title */
+            font-family: 'Courgette', cursive; /* Use the Google Font here */
+        }
+         /* Align the navigation links to the right */
+         .navbar-nav {
+            
+            margin-left: auto;
+        }
+
+        .nav-link {
+            font-family: 'Courgette', cursive; /* Use the Google Font here */
+            font-size: 1.5rem; /* Adjust the font size here */
+        }
+
+
+        .carousel-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            z-index: 1;
+            font-size: 5rem; /* Adjust the font size here */
+            font-family: 'Arial', sans-serif; /* Use your preferred font-family here */
+        }
+
+        .carousel-inner img {
+            object-fit: cover;
+            height: 100vh;
+            filter: blur(4px); 
+        }
+
+        .navbar-text {
+           
+            font-size: 2rem; /* Adjust the title font size here */
+            font-weight: bold;
+            margin-bottom: 10px; /* Add some spacing below the title */
+            font-family: 'Courgette', cursive; /* Use the Google Font here */
+        }
+    </style>
+</head>
+<body>
+     <!-- Scrolling Text -->
+     <div class="container-fluid bg-dark text-white py-2">
+        <div class="container">
+            <div class="scrolling-text">
+                Welcome to Duse watches! "Elevate your wrist with elegance – discover timepieces that transcend the ordinary."
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <div class="navbar-logo">
+                <img src="images/logo.png " width="100rem" height="100rem" alt="">
+                <span class="navbar-text">Duse Watches</span>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Auto-Playing Carousel with Large Text -->
+    <div class="carousel-container">
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/image1.jpg" class="d-block w-100" alt="Image 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/image2.jpg" class="d-block w-100" alt="Image 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/image3.jpg" class="d-block w-100" alt="Image 3">
+                </div>
+            </div>
+            <!-- Add carousel controls (optional) -->
+            
+        </div>
+        <div class="carousel-text">
+            <p class="carousel-title">Duse Watches</p>
+            <h1 class="carousel-subtitle">A world of watches.</h1>
+        </div>
+    </div>
+
+    <!-- Include Bootstrap JS (Optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Start carousel auto-play
+        $(document).ready(function() {
+            $('#carouselExample').carousel({
+                interval: 5000 // Set the interval in milliseconds (5 seconds in this case)
+            });
+        });
+    </script>
+</body>
+</html>
